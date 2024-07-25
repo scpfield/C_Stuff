@@ -121,7 +121,7 @@ SID_AND_ATTRIBUTES* DuplicateSidAndAttrsArray(
     /*  Variable for the SID_AND_ATTRIBUTES array part of 
         the output buffer  */
 
-    MY_SID_AND_ATTRIBUTES*  SidAttrs    =  NULL;
+    SID_AND_ATTRIBUTES*  SidAttrs    =  NULL;
    
     /*  Variables to keep track of where things begin */
 
@@ -131,7 +131,7 @@ SID_AND_ATTRIBUTES* DuplicateSidAndAttrsArray(
     /*  Assign our SID_AND_ATTRIBUTES pointer to the beginning 
         of the output buffer  */
    
-    SidAttrs    =   (MY_SID_AND_ATTRIBUTES*)  SidAttrsStart;
+    SidAttrs    =   (SID_AND_ATTRIBUTES*)  SidAttrsStart;
 
     /*  Now, iterate through the input SID_AND_ATTRIBUTES array
         and generate a copy of it.  
