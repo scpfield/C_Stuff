@@ -121,17 +121,16 @@ SID_AND_ATTRIBUTES* DuplicateSidAndAttrsArray(
     /*  Variable for the SID_AND_ATTRIBUTES array part of 
         the output buffer  */
 
-    SID_AND_ATTRIBUTES*  SidAttrs    =  NULL;
+    SID_AND_ATTRIBUTES*  SidAttrs   =  NULL;
    
     /*  Variables to keep track of where things begin */
 
-    UINT64  SidAttrsStart   =  (UINT64)     Buffer;
-    UINT64  SidsStart       =  (UINT64)     Buffer + SidAttrsSize;
+    UINT64  SidAttrsStart   =  ( UINT64 )  Buffer;
+    UINT64  SidsStart       =  ( UINT64 )  Buffer + SidAttrsSize;
    
-    /*  Assign our SID_AND_ATTRIBUTES pointer to the beginning 
-        of the output buffer  */
+    /*  Assign array pointer to the beginning of the output buffer */
    
-    SidAttrs    =   (SID_AND_ATTRIBUTES*)  SidAttrsStart;
+    SidAttrs    =   ( SID_AND_ATTRIBUTES* )  SidAttrsStart;
 
     /*  Now, iterate through the input SID_AND_ATTRIBUTES array
         and generate a copy of it.  
@@ -148,7 +147,7 @@ SID_AND_ATTRIBUTES* DuplicateSidAndAttrsArray(
         /*  First, make a copy of each SID from the original input data,
             which does a deep copy.  */
        
-        SID* CopyOfSrcSid       = DuplicateSid( SrcSidAttrs[ Index ].Sid );
+        SID* CopyOfSrcSid   = DuplicateSid( SrcSidAttrs[ Index ].Sid );
                
         /*  Determine the correct destination memory offsets in the
             output buffer for the current item.  */
