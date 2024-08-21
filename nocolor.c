@@ -66,8 +66,8 @@ void PrintUsage() {
     printf( "Program is intended to receive data via stdin pipe.\n" );
     printf( "\n" );
     printf( "Examples:\n" );
-    printf( "cat somefile | ./sc\n" );
-    printf( "echo 'somedata' | ./sc\n" );
+    printf( "cat somefile | ./nocolor\n" );
+    printf( "echo 'somedata' | ./nocolor\n" );
     printf( "\n");
     return;
 }
